@@ -8,15 +8,15 @@
         $timestamp = time();
     }else{
         $timestamp = $_GET["timestamp"];
+        if(strlen($timestamp) == 13)
+            $timestamp /= 1000;
     }
 
     if(is_weekend($timestamp)){
         $resp = array(
-            "menu" => array(
-                "Üniversitemize hafta sonu yemek çıkmıyor."
-            )
+            "menu" => array()
         );
-        echo generate_response(200,$resp);
+        echo generate_response(404,$resp);
         exit();
     }
 

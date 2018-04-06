@@ -1,6 +1,6 @@
-export const fetchMenu = (date = '') => {
+export const fetchMenu = (timestamp = '') => {
   return {
     type: 'FETCH_MENU',
-    payload: {date: date},
+    payload: {timestamp: timestamp},
   }
 }

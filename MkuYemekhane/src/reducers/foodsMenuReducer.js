@@ -1,7 +1,6 @@
 const initialState = {
   code: 0,
   isLoading: true,
-  message: null,
   menu: [],
 }
 
@@ -23,7 +22,6 @@ export default function(state = initialState, action){
         ...state,
         code: action.payload.code,
         isLoading: false,
-        message: action.payload.response.message
       }
     default:
       return state;

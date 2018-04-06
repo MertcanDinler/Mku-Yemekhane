@@ -6,8 +6,17 @@ import { PersistGate } from 'redux-persist/lib/integration/react'
 import { StyleProvider, Root } from 'native-base';
 import getTheme from './theme/components';
 import material from './theme/variables/material';
+import XDate from 'xdate';
 
 const { store, persistor } = configureStore()
+
+XDate.locales['tr'] = {
+  monthNames: ['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kastım','Aralık'],
+  monthNamesShort: ['Oca','Şub','Mar','Nis','May','Haz','Tem.','Ağu','Eyl','Eki','Kas','Ara'],
+  dayNames: ['Pazar','Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi'],
+  dayNamesShort: ['Paz','Pzt','Sal','Çar','Per','Cum','Cmt']
+};
+XDate.defaultLocale = 'tr';
 
 export default class App extends React.PureComponent {
   componentDidMount(){
