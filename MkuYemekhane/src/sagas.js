@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const api = axios.create({
   baseURL: 'http://10.0.2.1/mkuyemekhane/',
-  timeout: 4000,
+  timeout: 10000,
 });
 
 const watchFetchMenu = function* watchFetchMenu() {
@@ -14,7 +14,8 @@ const watchFetchMenu = function* watchFetchMenu() {
       const payload = yield call(fetchMenuData, data);
       yield put({ type: 'FETCH_MENU_SUCCESS', payload});
     }catch(error){
-      yield put({ type: 'FETCH_MENU_FAILED', payload:{code: 500}});
+      if(!error.code) error.code = 500;
+      yield put({ type: 'FETCH_MENU_FAILED', payload:{code: error.code}});
     }
   });
 };
@@ -31,6 +32,6 @@ const fetchMenuData = (data = {timestamp: ''}) => {
   return api.get('get_foods.php', {params: data}).then(response => {
     return response.data;
   }).catch( error => {
-    return Promise.reject({error: true});
+    return Promise.reject({code: 599});
   });
 };

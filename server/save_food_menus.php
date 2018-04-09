@@ -13,7 +13,14 @@
     }
 
     $date_prefix = date('my');
-    $html = file_get_contents("http://mku.edu.tr/FoodList.aspx");
+    $ch = curl_init();
+    $hc = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36";
+    curl_setopt($ch, CURLOPT_REFERER, 'http://www.mku.edu.tr/');
+    curl_setopt($ch, CURLOPT_URL, "http://www.mku.edu.tr/FoodList.aspx");
+    curl_setopt($ch, CURLOPT_USERAGENT, $hc);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    $html = curl_exec($ch);
+    curl_close($ch);
     $document = str_get_html($html);
     $menus = $document->find('.event-item');
     foreach($menus as $menu){

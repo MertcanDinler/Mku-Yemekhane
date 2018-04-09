@@ -1,9 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Container, Content, Button, Icon, Text, ListItem, Thumbnail, Body, List } from 'native-base';
+import { Container, Content, Button, Icon, Text, Spinner, ListItem, Thumbnail, Body, List } from 'native-base';
 import { fetchMenu } from '../../actions';
 import FoodTemplate from './foodTemplate';
 import Calendar from '../calendar';
+import Weekend from '../errors/weekend';
+import ConnectionFailed from '../errors/connection';
 import XDate from 'xdate';
 
 class Home extends React.PureComponent {
@@ -40,11 +42,22 @@ class Home extends React.PureComponent {
               <Text note>Tarihi değiştirmek için tıkla :)</Text>
             </Body>
           </ListItem>
-          <List
-            dataArray={this.props.foods.menu}
-            renderRow={this.renderFoodItem}>
-          >
-          </List>
+          {this.props.foods.isLoading ? 
+            <Spinner />
+          :
+          (this.props.foods.code == 200 ?
+            <List
+              dataArray={this.props.foods.menu}
+              renderRow={this.renderFoodItem}>
+            >
+            </List> 
+          : (this.props.foods.code == 404 ? 
+              <Weekend /> 
+            :
+              <ConnectionFailed />
+            )
+          )
+          }
         </Content>
       </Container>
     );

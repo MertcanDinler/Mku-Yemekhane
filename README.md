@@ -4,8 +4,7 @@ Mustafa Kemal Üniversitesi Yemekhanesi, yemek menüsü uygulaması.
 ### Yapılacaklar
 - [x] Uygulama oluşturma
 - [x] Ana sayfa tasarımı
-- [x] Tarih Değiştirme
-- [ ] Menü için tarih seçimi
+- [x] Menü için tarih seçimi
 - [ ] Menü paylaşımı
 - [ ] Günlük bildirimler
 - [ ] Bildirim ayarları
