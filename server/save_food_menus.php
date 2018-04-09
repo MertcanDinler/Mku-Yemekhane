@@ -1,6 +1,6 @@
 <?php
-    require_once("db.php");
-    require("simple_html_dom.php");
+    require_once("inc/db.php");
+    require("inc/simple_html_dom.php");
 
     function ucwords_tr($text){
         $problem = array(

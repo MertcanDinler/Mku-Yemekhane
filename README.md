@@ -1,6 +1,6 @@
 # MKÜ Yemekhane
 Mustafa Kemal Üniversitesi Yemekhanesi, yemek menüsü uygulaması.
-
+Beta versiyonu [buraya tıklayarak](https://raw.githubusercontent.com/mrtcndnlr/mku-yemekhane/master/apk/MkuYemekhane-Beta-1.apk "buraya tıklayarak") indirebilirsiniz.
 ### Yapılacaklar
 - [x] Uygulama oluşturma
 - [x] Ana sayfa tasarımı

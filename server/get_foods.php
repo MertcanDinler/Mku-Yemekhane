@@ -1,6 +1,6 @@
 <?php
     header('Content-Type: application/json');
-    require_once("generate_response.php");
+    require_once("inc/generate_response.php");
     function is_weekend($time) {
         return (date('N', ($time)) >= 6);
     }
@@ -20,7 +20,7 @@
         exit();
     }
 
-    require_once("db.php");
+    require_once("inc/db.php");
     $date = date('dmy', $timestamp);
     $query = $db->prepare("SELECT foods FROM foodlist WHERE date = ?");
     $query->execute(array(
