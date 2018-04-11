@@ -6,7 +6,10 @@ import FoodTemplate from './foodTemplate';
 import Calendar from '../calendar';
 import Weekend from '../errors/weekend';
 import ConnectionFailed from '../errors/connection';
+import Share from '../share';
 import XDate from 'xdate';
+
+const today = new XDate();
 
 class Home extends React.PureComponent {
   constructor(props){
@@ -33,7 +36,7 @@ class Home extends React.PureComponent {
   render() {
     return (
       <Container>
-        <Calendar isOpen={this.state.calendarIsOpen} onClosed={this.calendarOnClosed} onDateChanged={this.onDateChanged}/>
+        <Calendar isOpen={this.state.calendarIsOpen} onClosed={this.calendarOnClosed} onDateChanged={this.onDateChanged} today={today}/>
         <Content>
           <ListItem last onPress={this.toggleCalendar}>
             <Thumbnail square size={80} source={require('../../images/calendar.png')} />
@@ -59,6 +62,7 @@ class Home extends React.PureComponent {
           )
           }
         </Content>
+        { !this.state.calendarIsOpen && !this.props.foods.isLoading && this.props.foods.code == 200 && <Share menu={this.props.foods.menu} date={this.state.selectedDate}/>}
       </Container>
     );
   }

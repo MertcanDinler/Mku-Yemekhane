@@ -11,7 +11,8 @@ Beta versiyonu [buraya tıklayarak](https://raw.githubusercontent.com/mrtcndnlr/
 
 ### Ekran Görüntüleri
 ![Ana Sayfa](https://raw.githubusercontent.com/mrtcndnlr/mku-yemekhane/master/screenshots/home.png "Ana Sayfa")
-![Ana Sayfa](https://raw.githubusercontent.com/mrtcndnlr/mku-yemekhane/master/screenshots/calendar.png "Takvim")
+![Takvim](https://raw.githubusercontent.com/mrtcndnlr/mku-yemekhane/master/screenshots/calendar.png "Takvim")
+![Yan Menü](https://raw.githubusercontent.com/mrtcndnlr/mku-yemekhane/master/screenshots/drawer.png "Yan Menü")
 
 ### Geliştirici Sürümü Kurulumu
 #### Gereksinimler
