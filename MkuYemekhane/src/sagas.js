@@ -5,7 +5,15 @@ const api = axios.create({
   baseURL: 'http://10.0.2.1/mkuyemekhane/',
   timeout: 10000,
 });
-
+const watchSetNotification = function* watchSetNotification(){
+  yield takeEvery('SET_NOTIFICATION', function* (action){
+    try{
+      yield put({ type: 'SET_NOTIFICATION_SUCCESS', payload: action.payload});
+    }catch(error){
+      // TO-DO: Implement
+    }
+  });
+}
 const watchFetchMenu = function* watchFetchMenu() {
   yield takeEvery('FETCH_MENU', function* (action){
     yield put({type: 'FETCH_MENU_STARTED'});
@@ -23,6 +31,7 @@ const watchFetchMenu = function* watchFetchMenu() {
 const rootSaga = function* rootSaga() {
   yield all([
     watchFetchMenu(),
+    watchSetNotification(),
   ]);
 };
 

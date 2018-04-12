@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux';
-import foodsMenuReducer from './foodsMenuReducer';
+import foods from './foodsMenuReducer';
+import settings from './settingsReducer';
 export default combineReducers({
-    foods: foodsMenuReducer,
+    foods,
+    settings
 });

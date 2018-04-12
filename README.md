@@ -5,14 +5,15 @@ Beta versiyonu [buraya tıklayarak](https://raw.githubusercontent.com/mrtcndnlr/
 - [x] Uygulama oluşturma
 - [x] Ana sayfa tasarımı
 - [x] Menü için tarih seçimi
-- [ ] Menü paylaşımı
+- [x] Menü paylaşımı
+- [x] Bildirim ayarları
 - [ ] Günlük bildirimler
-- [ ] Bildirim ayarları
 
 ### Ekran Görüntüleri
 ![Ana Sayfa](https://raw.githubusercontent.com/mrtcndnlr/mku-yemekhane/master/screenshots/home.png "Ana Sayfa")
 ![Takvim](https://raw.githubusercontent.com/mrtcndnlr/mku-yemekhane/master/screenshots/calendar.png "Takvim")
 ![Yan Menü](https://raw.githubusercontent.com/mrtcndnlr/mku-yemekhane/master/screenshots/drawer.png "Yan Menü")
+![Ayarlar](https://raw.githubusercontent.com/mrtcndnlr/mku-yemekhane/master/screenshots/settings.png "Ayarlar")
 
 ### Geliştirici Sürümü Kurulumu
 #### Gereksinimler

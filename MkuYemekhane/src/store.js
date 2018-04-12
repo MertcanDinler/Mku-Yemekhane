@@ -8,7 +8,7 @@ import storage from 'redux-persist/lib/storage'
 const persistConfig = {
   key: 'mrtcnme@mkuyemekhane',
   storage: storage,
-  whitelist: []
+  whitelist: ['settings']
 }
 
 const persistedReducer = persistReducer(persistConfig, reducers)

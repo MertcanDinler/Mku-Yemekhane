@@ -1,19 +1,21 @@
 import React from 'react';
-import { Image } from 'react-native';
-import { Container, Content,  List, ListItem, Text, Icon, Left, Body, Right, } from 'native-base';
+import { Image, Share } from 'react-native';
+import { Container, Content, Footer,  List, ListItem, Text, Icon, Left, Body, Right, } from 'native-base';
 import styles from './styles';
 import { Actions } from 'react-native-router-flux';
 const cover = require('../../images/yemekhane.png');
 const logo = require('../../images/logo.png');
 const menuList = [
-{action: 'home', name: 'Ana Sayfa', icon: 'md-home'}
-
+{action: 'home', name: 'Ana Sayfa', icon: 'ios-home'},
+{action: 'settings', name: 'Ayarlar', icon: 'ios-cog'},
+{action: 'share', name: 'Uygulamayı Paylaş', icon: 'md-share'}
 ];
 class Drawer extends React.PureComponent {
   handlePress = (action) => {
-    if(action == 'home'){
-      Actions.drawerClose();
-    }else{
+    Actions.drawerClose();
+    if(action == 'share'){
+      Share.share({message: 'Uygulama linki buraya konacak'});
+    }else if(action != 'home'){
       Actions.push(action, {back: true});
     }
   }
@@ -38,6 +40,9 @@ class Drawer extends React.PureComponent {
           <List dataArray={menuList} renderRow={this.renderItem}>
           </List>
         </Content>
+        <Footer style={{backgroundColor: '#fff'}}>
+          <Text style={{textAlign:'center', fontSize: 12}} small>BÖTE bölümü Topluma Hizmet Uygulamaları dersi kapsamında geliştirilmiştir. {'\n\u00A9'} 2018</Text>
+        </Footer>
       </Container>
     );
   }
