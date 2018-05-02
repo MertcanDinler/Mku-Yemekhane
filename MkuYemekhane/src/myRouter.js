@@ -9,7 +9,7 @@ const drawerWidth = Dimensions.get('window').width*0.8;
 const MyRouter = () => (
   <Router hideNavBar= 'true'>
     <Scene key='root' navBar={Header}>
-      <Scene drawer hideNavBar key='drawer' contentComponent={Drawer} drawerWidth={drawerWidth}>
+      <Scene drawer hideNavBar key="drawer" contentComponent={Drawer} drawerWidth={drawerWidth}>
         <Scene key='home' title='MKÜ Yemekhane' component={Home} iconName='ios-home' initial={true}/>
       </Scene>
       <Scene key='settings' title='Ayarlar' component={Settings} />

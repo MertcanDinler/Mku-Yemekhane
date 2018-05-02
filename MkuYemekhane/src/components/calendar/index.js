@@ -17,7 +17,8 @@ class Calendar extends React.PureComponent {
   }
   handleSelect = (selectedDay) => {
     this.setState({selectedDay});
-    this.props.onDateChanged(selectedDay);
+    eqeq = selectedDay.timestamp != this.state.selectedDay.timestamp;
+    this.props.onDateChanged(selectedDay, eqeq);
   }
 
   render() {

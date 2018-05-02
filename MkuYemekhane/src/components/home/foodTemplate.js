@@ -2,6 +2,9 @@ import React from 'react';
 import { Item, Icon, ListItem, Text, Left, Body } from 'native-base';
 
 export default class FoodTemplate extends React.PureComponent{
+  componentDidMount(){
+    //alert(this.props.foodName);
+  }
   render(){
     return(
       <ListItem icon noBorder>

@@ -24,10 +24,13 @@ class Home extends React.PureComponent {
   }
   toggleCalendar = () => this.setState({calendarIsOpen: !this.state.calendarIsOpen});
   calendarOnClosed = () => this.setState({calendarIsOpen: false});
-  onDateChanged = (date) => {
-    this.props.fetchMenu(date.timestamp);
-    this.setState({selectedDate: new XDate(date.dateString)});
-    this.toggleCalendar();
+  onDateChanged = (date, eqeq) => {
+    this.setState({calendarIsOpen:false});
+    if(eqeq){
+      this.props.fetchMenu(date.timestamp);
+      this.setState({selectedDate: new XDate(date.dateString)});
+    }
+
   }
   formatDate = () => {
     return this.state.selectedDate.toString('dd MMMM yyyy dddd');

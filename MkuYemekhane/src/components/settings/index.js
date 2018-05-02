@@ -22,7 +22,7 @@ class Settings extends React.PureComponent {
           <List>
           <ListItem icon>
               <Left>
-                <Icon name='ios-notifications' />
+                <Icon name="ios-notifications" />
               </Left>
               <Body>
                 <Text>Pazartesi</Text>
@@ -33,7 +33,7 @@ class Settings extends React.PureComponent {
             </ListItem>
             <ListItem icon>
               <Left>
-                <Icon name='ios-notifications' />
+                <Icon name="ios-notifications" />
               </Left>
               <Body>
                 <Text>Salı</Text>
@@ -44,7 +44,7 @@ class Settings extends React.PureComponent {
             </ListItem>
             <ListItem icon>
               <Left>
-                <Icon name='ios-notifications' />
+                <Icon name="ios-notifications" />
               </Left>
               <Body>
                 <Text>Çarşamba</Text>
@@ -55,7 +55,7 @@ class Settings extends React.PureComponent {
             </ListItem>
             <ListItem icon>
               <Left>
-                <Icon name='ios-notifications' />
+                <Icon name="ios-notifications" />
               </Left>
               <Body>
                 <Text>Perşembe</Text>
@@ -66,7 +66,7 @@ class Settings extends React.PureComponent {
             </ListItem>
             <ListItem icon>
               <Left>
-                <Icon name='ios-notifications' />
+                <Icon name="ios-notifications" />
               </Left>
               <Body>
                 <Text>Cuma</Text>
